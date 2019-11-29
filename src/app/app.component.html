@@ -1,0 +1,17 @@
+<div style="padding-bottom: 5px">
+    <button (click)="onBtCopyRows()">Copy Selected Rows to Clipboard</button>
+    <button (click)="onBtCopyRange()">Copy Selected Range to Clipboard</button> &nbsp;&nbsp;&nbsp;&nbsp;
+    <button (click)="onPasteOn()">Toggle Paste On</button> <button (click)="onPasteOff()">Toggle Paste Off</button>
+    <button (click)="getSelectedRows()">Get Selected Rows</button>
+  </div>
+<ag-grid-angular 
+    #agGrid
+    style="width: 1500px; height: 1500px;" 
+    class="ag-theme-balham"
+    [rowData]="rowData | async"
+    [columnDefs]="columnDefs"
+    [modules]="modules"
+    rowSelection="multiple"
+    [enableRangeSelection]="true"
+    >
+</ag-grid-angular>
